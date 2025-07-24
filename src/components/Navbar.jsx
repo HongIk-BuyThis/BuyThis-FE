@@ -26,17 +26,17 @@ const Navbar = () => {
         {/* 로그인 또는 마이페이지 */}
         {isLoggedIn ? (
           <div
-            onClick={() => navigate('/mypage')}
-            className="text-[#000] text-sm font-normal cursor-pointer"
-          >
-            My Page
-          </div>
-        ) : (
-          <div
             onClick={() => navigate('/login')}
             className="text-[#000] text-sm font-normal cursor-pointer"
           >
             Login
+          </div>
+        ) : (
+          <div
+            onClick={() => navigate('/mypage')}
+            className="text-[#000] text-sm font-normal cursor-pointer"
+          >
+            My Page
           </div>
         )}
       </div>

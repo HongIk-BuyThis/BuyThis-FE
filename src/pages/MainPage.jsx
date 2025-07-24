@@ -1,4 +1,5 @@
 import LoginCard from '../components/LoginCard';
+import { useNavigate } from 'react-router-dom';
 
 import mainPageFrame from '../assets/MainPageFrame.png';
 import MapIcon from '../assets/map.svg';
@@ -6,6 +7,8 @@ import PartyPopIcon from '../assets/party-popper.svg';
 import HeartIcon from '../assets/circle-heart.svg';
 
 const MainPage = () => {
+    const navigate = useNavigate();
+    
   return (
     <div className="w-full min-h-screen bg-white px-[40px] py-[40px] box-border font-pretendard">
       {/* 고정된 전체 너비 wrapper (상단/중간/하단 통일) */}
@@ -24,28 +27,31 @@ const MainPage = () => {
         {/* 중간 버튼 3개 */}
         <div className="flex gap-[40px] justify-start items-start">
           {/* 버튼 1 */}
-          <div className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center">
+          <button className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center">
             <div className="w-10 h-10 flex justify-center items-center">
               <img src={MapIcon} alt="map" className="w-[28px] h-[28px]" />
             </div>
             <div className="text-main-dark text-[20px] font-normal">Birthday Map</div>
-          </div>
+          </button>
 
           {/* 버튼 2 */}
-          <div className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center">
+          <button className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center">
             <div className="w-10 h-10 flex justify-center items-center">
               <img src={PartyPopIcon} alt="star" className="w-[28px] h-[28px]" />
             </div>
             <div className="text-main-dark text-[20px] font-normal">Star days</div>
-          </div>
+          </button>
 
           {/* 버튼 3 */}
-          <div className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center">
+          <button 
+          onClick={() => navigate('/cafe')}
+          className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center"
+          >
             <div className="w-10 h-10 flex justify-center items-center">
               <img src={HeartIcon} alt="cafe" className="w-[28px] h-[28px]" />
             </div>
             <div className="text-main-dark text-[20px] font-normal">Cafe Info</div>
-          </div>
+          </button>
         </div>
 
         {/* 하단 예비 박스 */}

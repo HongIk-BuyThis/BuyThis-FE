@@ -26,11 +26,10 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/map" element={<MapPage />} />
         <Route path="/celebrity" element={<CelebrityPage />} />
-        <Route path="/cafe" element={<CafePage />} />
         <Route path="/tips" element={<TourTips />} />
         {/* 없는 주소 접속 시 404 */}
         <Route path="*" element={<NotFound />} />
-        <Route path="/cafe/:id" element={<CafeDetail />} />
+        <Route path="/cafe" element={<CafeDetail />} />
       </Routes>
     </>
   );
