@@ -21,7 +21,6 @@ const Navbar = () => {
         {/* 언어 필터 버튼 */}
         <button className="flex items-center gap-2 bg-main-bright px-3 py-1.5 rounded-full text-gray-900 text-sm font-medium">
           <img src={LanguageIcon} alt="언어 아이콘" className="w-4 h-4" />
-          언어 필터링
         </button>
 
         {/* 로그인 */}
@@ -30,7 +29,6 @@ const Navbar = () => {
           className="flex items-center gap-1 text-gray-100 text-sm font-pretendard cursor-pointer hover:underline"
         >
           <img src={LoginIcon} alt="로그인 아이콘" className="w-4 h-4" />
-          로그인
         </div>
       </div>
     </header>
