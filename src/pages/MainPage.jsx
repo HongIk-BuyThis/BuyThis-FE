@@ -1,6 +1,6 @@
-import React from 'react';
 import LoginCard from '../components/LoginCard';
 
+import mainPageFrame from '../assets/MainPageFrame.png';
 import MapIcon from '../assets/map.svg';
 import PartyPopIcon from '../assets/party-popper.svg';
 import HeartIcon from '../assets/circle-heart.svg';
@@ -16,7 +16,8 @@ const MainPage = () => {
           <LoginCard size="small" />
 
           {/* 오른쪽 소개 박스 */}
-          <div className="w-[668px] h-[462px] bg-neutral-200 relative overflow-hidden shadow">
+          <div className="w-[668px] h-[462px] bg-neutral-200 relative overflow-hidden shadow rounded-[15px]">
+            <img src={mainPageFrame}/>
           </div>
         </div>
 
