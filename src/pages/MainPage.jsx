@@ -1,5 +1,6 @@
+import { useNavigate } from 'react-router-dom'; // 라우터 훅 import
 import LoginCard from '../components/LoginCard';
-import { useNavigate } from 'react-router-dom';
+import HotspotsImg from '../assets/Hotspots.png';
 
 import mainPageFrame from '../assets/MainPageFrame.png';
 import MapIcon from '../assets/map.svg';
@@ -7,8 +8,8 @@ import PartyPopIcon from '../assets/party-popper.svg';
 import HeartIcon from '../assets/circle-heart.svg';
 
 const MainPage = () => {
-    const navigate = useNavigate();
-    
+  const navigate = useNavigate(); // 페이지 이동 함수
+
   return (
     <div className="w-full min-h-screen bg-white px-[40px] py-[40px] box-border font-pretendard">
       {/* 고정된 전체 너비 wrapper (상단/중간/하단 통일) */}
@@ -51,23 +52,30 @@ const MainPage = () => {
             <div className="text-main-dark text-[20px] font-normal">
               Star days
             </div>
-            <div className="text-main-dark text-[20px] font-normal">Star days</div>
           </button>
 
           {/* 버튼 3 */}
-          <button 
-          onClick={() => navigate('/cafe')}
-          className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center"
+          <button
+            onClick={() => navigate('/cafe')}
+            className="w-80 px-12 py-4 bg-white rounded-2xl outline outline-2 outline-main-dark flex justify-between items-center"
           >
             <div className="w-10 h-10 flex justify-center items-center">
               <img src={HeartIcon} alt="cafe" className="w-[28px] h-[28px]" />
             </div>
-            <div className="text-main-dark text-[20px] font-normal">Cafe Info</div>
+            <div className="text-main-dark text-[20px] font-normal">
+              Cafe Info
+            </div>
           </button>
         </div>
 
         {/* 하단 예비 박스 */}
-        <div className="w-full h-[176px] bg-gray-200 rounded" />
+        <div className="w-full flex justify-center mt-[40px]">
+          <img
+            src={HotspotsImg}
+            alt="Fan Hotspots Nearby"
+            className="w-[1013px] rounded-[12px] shadow-md"
+          />
+        </div>
       </div>
     </div>
   );
