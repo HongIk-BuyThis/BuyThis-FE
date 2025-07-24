@@ -1,5 +1,5 @@
 import Navbar from '../components/Navbar';
-import markerImg from '../assets/Ellispe 6.png'; // 마커로 쓸 이미지
+import markerImg from '../assets/Ellipse 6.png'; // 마커로 쓸 이미지
 import backgroundImg from '../assets/map.png'; // 배경용 지도 이미지 (스크린샷)
 
 const markers = [
@@ -13,14 +13,7 @@ const markers = [
 const MapPage = () => {
   return (
     <div className="w-full h-screen bg-white flex flex-col">
-      <Navbar />
-
       <div className="relative w-full flex flex-col items-center px-[40px] py-[24px] gap-[24px]">
-        {/* 타이틀 */}
-        <h1 className="text-[28px] font-bold text-[#00B2FF] font-pretendard">
-          KPOP CAFE HUNTERS
-        </h1>
-
         {/* 검색창 */}
         <input
           type="text"

@@ -28,9 +28,9 @@ const App = () => {
         <Route path="/celebrity" element={<CelebrityPage />} />
         <Route path="/cafe" element={<CafePage />} />
         <Route path="/tips" element={<TourTips />} />
+        <Route path="/cafe/:id" element={<CafeDetail />} />
         {/* 없는 주소 접속 시 404 */}
         <Route path="*" element={<NotFound />} />
-        <Route path="/cafe/:id" element={<CafeDetail />} />
       </Routes>
     </>
   );
