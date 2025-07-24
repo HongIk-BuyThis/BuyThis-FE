@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'; // 라우터 훅 import
 import LoginCard from '../components/LoginCard';
 import { useNavigate } from 'react-router-dom';
 
