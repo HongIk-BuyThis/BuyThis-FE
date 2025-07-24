@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/KPOP_CAFE_HUNTERS.svg';
-import LanguageIcon from '../assets/LanguageFilter.svg';
 import LanguageSelector from '../components/LanguageSelector';
 // 로그인 여부 임시 상태 (나중에 Zustand, Context 등으로 교체 가능)
 const isLoggedIn = true; // 실제 상태 연동 필요
