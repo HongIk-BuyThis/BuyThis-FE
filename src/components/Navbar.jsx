@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/KPOP_CAFE_HUNTERS.svg';
 import LanguageIcon from '../assets/LanguageFilter.svg';
-
+import LanguageSelector from '../components/LanguageSelector';
 // 로그인 여부 임시 상태 (나중에 Zustand, Context 등으로 교체 가능)
 const isLoggedIn = true; // 실제 상태 연동 필요
 
@@ -20,11 +20,8 @@ const Navbar = () => {
 
       {/* 오른쪽 버튼 영역 */}
       <div className="flex items-center gap-6">
-        {/* 언어 필터 버튼 */}
-        <button className="flex items-center gap-2 px-6 py-2 rounded-[10px] bg-[#DFF8F5] text-black text-sm font-normal">
-          <img src={LanguageIcon} alt="언어 아이콘" className="w-5 h-5" />
-          English
-        </button>
+        {/* LanguageSelector 컴포넌트 삽입 */}
+        <LanguageSelector />
 
         {/* 로그인 또는 마이페이지 */}
         {isLoggedIn ? (
