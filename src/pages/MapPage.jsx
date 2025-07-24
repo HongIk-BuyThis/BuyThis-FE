@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import { useNavigate } from 'react-router-dom';
 import markerImg from '../assets/Ellipse 6.png'; // 마커로 쓸 이미지
 import backgroundImg from '../assets/map.png'; // 배경용 지도 이미지 (스크린샷)
 
@@ -11,6 +12,7 @@ const markers = [
 ]; // 마커 위치는 원하는 대로 조정 가능
 
 const MapPage = () => {
+    const navigate = useNavigate();
   return (
     <div className="w-full h-screen bg-white flex flex-col">
       <div className="relative w-full flex flex-col items-center px-[40px] py-[24px] gap-[24px]">
@@ -33,9 +35,14 @@ const MapPage = () => {
             <img
               key={marker.id}
               src={markerImg}
-              alt="마커"
-              className="absolute w-[40px] h-[40px]"
+              alt={`마커 ${marker.id}`}
+              className="absolute w-[40px] h-[40px] cursor-pointer"
               style={{ top: marker.top, left: marker.left }}
+              onClick={() => {
+                if (marker.id === 1) {
+                  navigate('/cafe/1');
+                }
+              }}
             />
           ))}
         </div>
