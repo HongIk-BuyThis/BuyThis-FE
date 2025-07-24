@@ -9,6 +9,7 @@ import CelebrityPage from './pages/CelebrityPage';
 import CafePage from './pages/CafePage';
 import TourTips from './pages/TourTips';
 import NotFound from './pages/NotFound';
+import CafeDetail from './pages/CafeDetail';
 
 const App = () => {
   const location = useLocation();
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/tips" element={<TourTips />} />
         {/* 없는 주소 접속 시 404 */}
         <Route path="*" element={<NotFound />} />
+        <Route path="/cafe/:id" element={<CafeDetail />} />
       </Routes>
     </>
   );
